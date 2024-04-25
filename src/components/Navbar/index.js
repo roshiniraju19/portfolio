@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import { DiCssdeck } from "react-icons/di";
 import { Link as LinkR } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
@@ -137,16 +137,6 @@ const MobileMenu = styled.div`
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
 `
-const MobileMenuLink = styled(LinkR)`
-  color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  :hover {
-    color: ${({ theme }) => theme.primary};
-  }
-`;
 
 const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
@@ -163,25 +153,25 @@ const MobileLink = styled.a`
   }
 `;
 
+export const LogoLink = styled.div`
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+`;
+
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const githubLink = "https://github.com/roshiniraju19";
   return (
     <Nav>
       <NavContainer>
-        <NavLogo to="/">
-        <a
-          style={{
-            display: "flex",
-            alignItems: "center",
-            color: "white",
-            marginBottom: "20",
-            cursor: "pointer",
-          }}
-          >
+      <NavLogo to="/">
+          <LogoLink>
             <DiCssdeck size = "3rem" />
             <Span>Portfolio</Span>
-          </a>
+          </LogoLink>
         </NavLogo>
         <MobileIcon>
           <FaBars 
