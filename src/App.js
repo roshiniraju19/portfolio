@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import './App.css';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './utils/Themes';
@@ -23,10 +24,6 @@ const Wrapper = styled.div`
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
-
-
-
-function App() {
 
   function App() {
     useEffect(() => {
@@ -56,6 +53,7 @@ function App() {
       </Router>
     </ThemeProvider>
   );
+  
 }
 
 export default App;
