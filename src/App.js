@@ -24,7 +24,16 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
 
+
+
 function App() {
+
+  function App() {
+    useEffect(() => {
+      document.title = "Your Page Title"; // Set your desired title here
+    }, []);
+
+    
   return (
     <ThemeProvider theme={darkTheme}>
       <Router>
