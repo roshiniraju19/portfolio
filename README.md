@@ -1,7 +1,7 @@
 # My Portfolio Website
 
 ## Overview
-This is my personal portfolio website built using ReactJS. It showcases my projects, skills, and experiences to potential employers, clients, and collaborators. The website is designed to be responsive, user-friendly, and visually appealing.
+This is my personal portfolio website built using ReactJS. It showcases my projects, skills, achievements. The website is designed to be responsive, user-friendly, and visually appealing.
 
 ## Features
 - Display projects with descriptions, screenshots, and links.
